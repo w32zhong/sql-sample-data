@@ -1,0 +1,88 @@
+
+<!-- saved from url=(0067)http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<title> Database System Concepts - 6th edition</title>
+<meta name="chromesniffer" id="chromesniffer_meta" content="{}"><script type="text/javascript" src="chrome-extension://fhhdlnnepfjhlhilgmeepgkhjmhhhjkh/js/detector.js"></script></head>
+<body bgcolor="#FFFFFF" link="#0077FF">
+<img src="./Database System Concepts - 6th edition_files/db6-cover.jpg" alt="------- book cover -------" align="left" width="114" hspace="10">
+
+<font size="+2"><b>Database System Concepts</b></font><br><font size="+1"><i><b>Sixth Edition</b></i></font>
+<dl>
+<dt> <b><a href="http://www.cs.yale.edu/homes/avi">Avi Silberschatz</a></b>
+</dt><dt> <b><a href="http://www.lehigh.edu/~hfk2/hfk2.html">Henry F. Korth</a></b>
+</dt><dt> <b><a href="http://www.cse.iitb.ac.in/~sudarsha">S. Sudarshan</a></b>
+</dt></dl> <br>
+<clear="all">
+
+<p>
+<img src="./Database System Concepts - 6th edition_files/line.gif" width="475" height="4" alt="line separator">
+</p><p>
+
+We provide below the DDL and sample data for the tables in the university that we use in our text,
+with one change: instead of using the <b>time</b> data type, which is not supported on some databases 
+such as Oracle, we split start_time into start_hr and start_min, and end_time
+into end_hr and end_min, which are integer types.  
+If the database you use supports the <b>time</b> type, and you wish to use it,
+you can modify the DDL and the sample data files accordingly.
+
+</p><p>
+</p><dl>
+<dt><img src="./Database System Concepts - 6th edition_files/blueball.gif" height="14" width="14" alt="-">
+         <a href="http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/DDL.sql">DDL</a> (use this the first time),
+         <a href="http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/DDL+drop.sql">DDL with drop table</a> (use this if you wish to recreate the database after dropping
+	existing tables)
+   
+<p>      
+</p></dt><dt> <img src="./Database System Concepts - 6th edition_files/blueball.gif" height="14" width="14" alt="-">
+         <a href="http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/smallRelations/smallRelationsInsertFile.sql">SQL code for creating small relations</a>
+</dt><dd>The file smallRelationsInsertFile.sql contains data that matches Appendix A exactly.  The file contains SQL
+insert statements to load data into all the tables, after first deleting any data that the tables currently
+contain.<br>
+The data include students taking courses outside their department, and instructors teaching courses outside
+their department; this helps detect errors in natural join specifications that accidentally equate department names of students
+or instructors with department names of courses.
+</dd>
+<p>
+</p><dt> <img src="./Database System Concepts - 6th edition_files/blueball.gif" height="14" width="14" alt="-">
+         <a href="http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/largeRelations/largeRelationsInsertFile.sql">SQL code for
+creating large relations</a>
+</dt><dd>The file largeRelationsInsertFile.sql contains
+SQL insert statements for larger, randomly created relations for a 
+truly strange university (since course titles and department names are 
+chosen randomly). 
+</dd>
+
+<dd>
+The sizes of the relations are as follows:
+<table border="1">
+<tbody><tr><td> department </td><td> 20 </td></tr>
+<tr><td> instructor  </td><td> 50 </td></tr>
+<tr><td> student </td><td> 2000 </td></tr>
+<tr><td> course </td><td> 200 </td></tr>
+<tr><td> prereq </td><td> 100 </td></tr>
+<tr><td> section </td><td> 100 </td></tr>
+<tr><td> time_slot </td><td> 20 </td></tr>
+<tr><td> teaches </td><td> 100 </td></tr>
+<tr><td> takes  </td><td> 30000 </td></tr>
+<tr><td> advisor </td><td> 2000 </td></tr>
+</tbody></table>
+
+</dd>
+
+<p>
+</p><dt> <img src="./Database System Concepts - 6th edition_files/blueball.gif" height="14" width="14" alt="-">
+         <a href="http://codex.cs.yale.edu/avi/db-book/db6/lab-dir/sample_tables-dir/largeRelations/tableGen.java">tableGen.java</a>
+</dt><dd>
+The file tableGen.java contains a Java program for generating the 
+largeRelations data.  Be warned that some versions of the eclipse 
+Java compiler lack the java.util.Scanner class that this program uses; 
+if you run into a problem compiling this program,
+we suggest you upgrade to the latest version of the eclipse
+Java compiler, or use the Sun Java compiler instead.
+</dd>
+</dl>
+<img src="./Database System Concepts - 6th edition_files/line.gif" width="750" height="4" alt="line separator">
+
+
+</clear="all"><div id="jquery_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_0" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0" preload="metadata"></audio></div><div id="jquery_jplayer_2" style="width: 0px; height: 0px;"><img id="jp_poster_1" style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_1" preload="metadata"></audio></div></body></html>
